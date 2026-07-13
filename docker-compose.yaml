@@ -2,19 +2,19 @@ name: roboshop
 services:
   mongodb:
     build: ./mongodb
-    image: joindevops/mongodb:v1 # docker build -t joindevops/mongodb:v1
+    image: mostandmore/mongodb:v1 # docker build -t joindevops/mongodb:v1
     container_name: mongodb # docker run -d --network roboshop joindevops/mongodb:v1
     # volumes:
     # - mongodb:/data/db # mongodb stores data in /data/db directory
   catalogue:
     build: ./catalogue
-    image: joindevops/catalogue:v1
+    image: mostandmore/catalogue:v1
     container_name: catalogue
     depends_on:
     - mongodb
   frontend:
     build: ./frontend
-    image: joindevops/frontend:v1
+    image: mostandmore/frontend:v1
     container_name: frontend
     ports:
     - "80:80"
