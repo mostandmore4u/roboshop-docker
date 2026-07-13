@@ -21,7 +21,7 @@ services:
     depends_on:
     - catalogue
     - user
-    # - cart
+    - cart
     # - shipping
     # - payment
   user:
