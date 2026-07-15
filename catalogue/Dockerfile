@@ -12,7 +12,7 @@ COPY --from=builder /app /app
 EXPOSE 8080
 ENV MONGO="true" \
     MONGO_URL="mongodb://mongodb:27017/catalogue"
-USER roboshop
+#USER roboshop
 CMD ["node", "server.js"]
 
 # FROM node:20
